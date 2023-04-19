@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  proyectito:
+    container_name: proyectito
+    build: .
+    ports:
+      - 8080:3000
+    links:
+      - datitos
+  datitos:
+    container_name: datitos
+    image: mongo
+    ports:
+      - 27017:27017

@@ -7,7 +7,7 @@ const PORT = 3000;
 
 const db = await mongoose
   .connect("mongodb://datitos:27017/test-docker")
-  .then(() => console.log("Conexión exitosa a base de datos"))
+  .then(() => console.log("Conexión exitosa a base de datos - modificado desde el container"))
   .catch((e) =>
     console.log(`No se puso conectar a la base de datos + ${e.message}`)
   );

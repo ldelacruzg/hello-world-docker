@@ -1,16 +1,16 @@
 version: "3.9"
 services:
   proyectito:
+    depends_on:
+      - datitos
     container_name: proyectito
     build:
       context: .
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
     ports:
-      - 3001:3000
-    links:
-      - datitos
-    volumes:
-      - .:/usr/src/app
+      - 3000:3000
+    # volumes:
+    #  - ../:/usr/src/app
   datitos:
     container_name: datitos
     image: mongo

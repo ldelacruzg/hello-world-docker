@@ -22,7 +22,8 @@ const ProductModel = mongoose.model("Product", ProductSchema);
 // Endpoint
 app.get("/", async (_, res) => {
   console.log("listando products...");
-  res.json({ data: await ProductModel.find() });
+  res.send("Hola mundo");
+  //res.json({ data: await ProductModel.find() });
 });
 
 app.get("/crear", async (_, res) => {
